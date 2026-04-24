@@ -928,8 +928,8 @@ void ProcessesView::BuildPropertiesWindow(ProcessProperties* props) {
 					Row("Page Faults", "%s", FormatHelper::FormatWithCommas(pi->PageFaultCount).GetString());
 					Row("Hard Faults", "%s", FormatHelper::FormatWithCommas(pi->HardFaultCount).GetString());
 					Separator();
-					Row("CPU Time (User)", "%s", FormatHelper::TimeSpanToString(pi->UserTime).GetString());
-					Row("CPU Time (Kernel)", "%s", FormatHelper::TimeSpanToString(pi->KernelTime).GetString());
+					Row("CPU Time (User)", "%ws", FormatHelper::TimeSpanToString(pi->UserTime).GetString());
+					Row("CPU Time (Kernel)", "%ws", FormatHelper::TimeSpanToString(pi->KernelTime).GetString());
 
 					EndTable();
 				}
